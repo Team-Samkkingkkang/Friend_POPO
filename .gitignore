@@ -79,3 +79,4 @@ fabric.properties
 *.pyc
 __pychache__/
 media/
+.idea

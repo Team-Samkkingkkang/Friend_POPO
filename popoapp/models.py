@@ -78,7 +78,7 @@ class Board(models.Model):
     diary = models.ForeignKey(Diary, on_delete=models.CASCADE)
     board_title = models.CharField(max_length=200)
     board_content = models.TextField()
-    board_date = models.DateTimeField(auto_now=True)
+    board_date = models.DateTimeField()
     board_img = models.ImageField()
 
 
@@ -92,4 +92,3 @@ class Comment(models.Model):
 class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
-

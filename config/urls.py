@@ -21,4 +21,5 @@ from popoapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accountapp/', include('accountapp.urls')),
+    path('', views.index, name="index"),
 ]

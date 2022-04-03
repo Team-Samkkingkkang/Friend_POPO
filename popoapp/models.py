@@ -5,7 +5,7 @@ class User(models.Model):
     user_email = models.EmailField(max_length=200)
     user_password = models.CharField(max_length=200)
     user_nickname = models.CharField(max_length=200)
-    user_profile = models.ImageField()
+    user_profile = models.ImageField(default='static/default.png')
     user_regi_date = models.DateTimeField(auto_now_add=True)
     user_number = models.IntegerField()
     user_sns_type = models.CharField(max_length=200)
@@ -78,7 +78,7 @@ class Board(models.Model):
     diary = models.ForeignKey(Diary, on_delete=models.CASCADE)
     board_title = models.CharField(max_length=200)
     board_content = models.TextField()
-    board_date = models.DateTimeField(auto_now=True)
+    board_date = models.DateTimeField()
     board_img = models.ImageField()
 
 
@@ -92,4 +92,3 @@ class Comment(models.Model):
 class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
-

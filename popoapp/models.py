@@ -40,7 +40,7 @@ class Qna(models.Model):
     qna_title = models.CharField(max_length=200)
     qna_content = models.TextField()
     qna_date = models.DateTimeField(auto_now=True)
-    qna_img = models.ImageFieldField()
+    qna_img = models.ImageField()
     qna_status = models.BooleanField()
 
 

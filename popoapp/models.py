@@ -5,7 +5,7 @@ class User(models.Model):
     user_email = models.EmailField(max_length=200)
     user_password = models.CharField(max_length=200)
     user_nickname = models.CharField(max_length=200)
-    user_profile = models.ImageField(default='static/default.png')
+    user_profile = models.ImageField()
     user_regi_date = models.DateTimeField(auto_now_add=True)
     user_number = models.IntegerField()
     user_sns_type = models.CharField(max_length=200)
